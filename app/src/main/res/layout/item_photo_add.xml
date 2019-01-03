@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:background="@drawable/bg_ripper_borderless"
+    android:layout_height="148dp">
+
+    <ImageView
+        android:id="@+id/ivAddPhoto"
+        android:layout_width="164dp"
+        android:layout_height="123dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/btn_addpicture" />
+
+    <ImageView
+        android:id="@+id/ivDeletePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/btn_close" />
+</RelativeLayout>

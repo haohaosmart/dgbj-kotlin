@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="111dp"
+    android:layout_height="120dp"
+    android:background="@drawable/bg_feedback_item"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvBatchAdd"
+        android:layout_width="match_parent"
+        android:drawableLeft="@mipmap/icon_add_more"
+        android:background="@drawable/bg_ripper_border"
+        android:text="批量添加"
+        android:textSize="14sp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="13dp"
+        android:drawablePadding="10dp"
+        android:textColor="#333333"
+        android:layout_height="40dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginLeft="8dp"
+        android:background="#EDEDED"/>
+    <TextView
+        android:id="@+id/tvBatchRemove"
+        android:layout_width="match_parent"
+        android:drawableLeft="@mipmap/icon_delete"
+        android:background="@drawable/bg_ripper_border"
+        android:text="批量删除"
+        android:textSize="14sp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="13dp"
+        android:drawablePadding="10dp"
+        android:textColor="#333333"
+        android:layout_height="40dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginLeft="8dp"
+        android:background="#EDEDED"/>
+    <TextView
+        android:id="@+id/tvAddHouse"
+        android:layout_width="match_parent"
+        android:drawableLeft="@mipmap/icon_add"
+        android:background="@drawable/bg_ripper_border"
+        android:text="添加门户"
+        android:textSize="14sp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="13dp"
+        android:drawablePadding="10dp"
+        android:textColor="#333333"
+        android:layout_height="40dp" />
+</LinearLayout>

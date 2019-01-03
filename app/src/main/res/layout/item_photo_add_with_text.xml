@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="180dp"
+    android:background="@drawable/bg_ripper_borderless"
+    android:layout_height="180dp">
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="164dp"
+        android:layout_height="123dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/btn_addpicture" />
+    <ImageView
+        android:id="@+id/ivDeletePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/btn_close" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:background="#F8F8F8"
+        android:layout_below="@id/ivPhoto"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:lines="2"
+            android:ellipsize="end"
+            android:textColor="#999999"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

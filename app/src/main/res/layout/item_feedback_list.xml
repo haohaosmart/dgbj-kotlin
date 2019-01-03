@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/bg_feedback_item"
+        android:layout_height="115dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="11dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:text="反馈时间："
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvFeedbackDate"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:lines="1"
+                android:ellipsize="end"
+                android:text="2018-12-12"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="11dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:text="反馈类型："
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvFeedbackType"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:lines="1"
+                android:ellipsize="end"
+                android:text="业务流程"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="11dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:text="反馈内容："
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvFeedbackContent"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:lines="2"
+                android:ellipsize="end"
+                android:textColor="#333333"
+                android:text="dfsajkfldsa爱神的箭离开房间爱上打开了房间的快乐撒荆防颗粒时间啊开了房"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

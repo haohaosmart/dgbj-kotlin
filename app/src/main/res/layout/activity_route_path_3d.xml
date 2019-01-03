@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/pageTitle" />
+    <com.baishijiaju.dgbjForKotlin.widget.CommonPageTitle
+        android:id="@+id/pageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftImgSrc="@mipmap/icon_back"
+        app:titleText="路线记录" />
+
+    <TextView
+        android:id="@+id/tvRecordIndex"
+        android:layout_width="50dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_back_record_index"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/location_errInfo_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="#FF0000"
+        android:textColor="#333333"
+        android:text="TextView"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvRecord"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="#2A62FF"
+        android:text="开始记录采集路线"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/bg_map_overlayer"
+        android:layout_marginTop="100dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvChangeMapType"
+            android:layout_width="match_parent"
+            android:text="图层"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:drawablePadding="7dp"
+            android:background="@drawable/bg_ripper_borderless"
+            android:drawableTop="@mipmap/icon_home_eyes"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="25dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#EDEDED"/>
+
+        <TextView
+            android:id="@+id/tvLocate"
+            android:layout_width="match_parent"
+            android:text="定位"
+            android:textColor="#666666"
+            android:background="@drawable/bg_ripper_borderless"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:drawablePadding="7dp"
+            android:drawableTop="@mipmap/icon_home_gps"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

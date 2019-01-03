@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorBack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.baishijiaju.dgbjForKotlin.widget.CommonPageTitle
+        android:id="@+id/pageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftImgSrc="@mipmap/icon_back"
+        app:titleText="编辑小区内部照片" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvPhotos"
+        android:layout_below="@id/pageTitle"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="220dp" />
+
+    <Button
+        android:id="@+id/btToSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="#2A62FF"
+        android:text="提交"
+        android:textColor="#FEFEFE"
+        android:textSize="16sp" />
+</RelativeLayout>

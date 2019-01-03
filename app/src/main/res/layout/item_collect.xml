@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="16dp"
+    android:background="@drawable/bg_collect_item"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_height="115dp">
+    
+    <com.baishijiaju.dgbj.widget.RoundCornerImageView
+        android:id="@+id/ivCollect"
+        android:layout_width="124dp"
+        android:background="#CCCCCC"
+        app:rciv_radius="3dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="93dp" />
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="47dp"
+        android:layout_marginTop="18.5dp"
+        android:textSize="12sp"
+        android:text=""
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_height="20dp" />
+    <TextView
+        android:id="@+id/tvEstateName"
+        android:layout_width="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#333333"
+        android:layout_toRightOf="@id/ivCollect"
+        android:text=""
+        android:lines="1"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="26dp" />
+    <TextView
+        android:id="@+id/tvCreateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:gravity="left|bottom"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:textSize="12sp"
+        android:textColor="#333333"
+        android:text=""
+        />
+    <LinearLayout
+        android:id="@+id/llDesc"
+        android:layout_below="@id/tvEstateName"
+        android:layout_toRightOf="@id/ivCollect"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical"
+        android:layout_height="26dp">
+
+        <TextView
+            android:id="@+id/tvBuildingNum"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="#333333"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvHouseNum"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="#333333"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvBuildYear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text=""
+            android:gravity="right"
+            android:textSize="12sp"
+            android:textColor="#333333"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_below="@id/llDesc"
+        android:layout_toRightOf="@id/ivCollect"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="6.5dp"
+        android:gravity="left|center_vertical"
+        android:textSize="12sp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:drawablePadding="4dp"
+        android:drawableLeft="@mipmap/icon_smallgps"
+        android:text=""
+        android:textColor="#666666" />
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:textSize="11sp"
+        android:textColor="#333333"
+        android:layout_below="@id/tvAddress"
+        android:gravity="left|center_vertical"
+        android:layout_toRightOf="@id/ivCollect"
+        android:layout_marginLeft="10dp"
+        android:text="数据量"
+        android:layout_height="26dp" />
+
+    <RelativeLayout
+        android:id="@+id/rvProgress"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tvAddress"
+        android:gravity="center"
+        android:layout_toRightOf="@id/tvLabel"
+        android:layout_height="26dp">
+
+        <View
+            android:id="@+id/viewProgress"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/bg_progress_selected"
+            />
+        <View
+            android:id="@+id/viewUnProgress"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="12dp"
+            android:layout_width="29dp"
+            android:background="@drawable/bg_progress_unselected"
+            android:layout_height="4dp"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="20dp"
+            android:layout_toLeftOf="@id/viewUnProgress"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="0dp"
+            android:gravity="center"
+            android:textSize="8sp"
+            android:background="@drawable/bg_progress_text"
+            android:textColor="@color/white"
+            android:text=""
+            android:layout_height="10dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

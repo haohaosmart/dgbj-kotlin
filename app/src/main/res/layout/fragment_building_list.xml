@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tvChildLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:drawableLeft="@mipmap/icon_b"
+            android:drawablePadding="12dp"
+            android:text="楼栋"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/tvAddChild"
+            android:layout_width="wrap_content"
+            android:gravity="right|center_vertical"
+            android:layout_marginRight="16dp"
+            android:drawableLeft="@mipmap/icon_add"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="添加楼栋"
+            android:background="@drawable/bg_ripper_borderless"
+            android:drawablePadding="10dp"
+            android:textColor="#2A62FF"
+            android:textSize="14sp"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvChildren"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EDEDED" />
+</LinearLayout>

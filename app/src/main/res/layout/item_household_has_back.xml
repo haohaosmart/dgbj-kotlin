@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="107dp"
+    android:layout_height="44dp">
+    <LinearLayout
+        android:id="@+id/llCheck"
+        android:layout_width="85dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_height="34dp">
+        <CheckBox
+            android:id="@+id/cbHasBack"
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:clickable="false"
+            android:textColor="#333333"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox_has_back"
+            android:drawablePadding="5dp"
+            android:text="靠山"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

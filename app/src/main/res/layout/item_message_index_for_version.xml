@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_ripper_border"
+    android:layout_width="match_parent"
+    android:layout_height="75dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/ivMessageType"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:src="@mipmap/icon_blue"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvMessageType"
+        android:layout_toRightOf="@id/ivMessageType"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="19dp"
+        android:textSize="15sp"
+        android:textColor="#333333"
+        android:text="软件更新"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tvMessageType"
+        android:layout_toRightOf="@id/ivMessageType"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="16dp"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:textColor="#999999"
+        android:text=""
+        android:layout_height="wrap_content" />
+</RelativeLayout>

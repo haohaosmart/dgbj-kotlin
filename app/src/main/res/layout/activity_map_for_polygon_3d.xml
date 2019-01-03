@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <com.baishijiaju.dgbjForKotlin.widget.CommonPageTitle
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftImgSrc="@mipmap/icon_back"
+        app:titleText="地图标记" />
+
+    <TextView
+        android:id="@+id/location_errInfo_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="#FF0000"
+        android:text="TextView"
+        android:textColor="#333333"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_map_overlayer"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tvChangeMapType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="7dp"
+            android:drawableTop="@mipmap/icon_home_eyes"
+            android:gravity="center"
+            android:text="图层"
+            android:background="@drawable/bg_ripper_borderless"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="25dp"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#EDEDED" />
+
+        <TextView
+            android:id="@+id/tvLocate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="7dp"
+            android:drawableTop="@mipmap/icon_home_gps"
+            android:gravity="center"
+            android:background="@drawable/bg_ripper_borderless"
+            android:text="定位"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="69dp"
+        android:layout_height="69dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20.5dp"
+        android:background="@drawable/bg_back_oval" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bg_map_button_back">
+
+        <LinearLayout
+            android:id="@+id/llMakeMarker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_ripper_borderless"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvMakeMarker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="描点"
+                android:drawableTop="@drawable/bg_make_marker"
+                android:textColor="@drawable/bg_text_polygon_make"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPaintLine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/bg_ripper_borderless"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPaintLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:drawableTop="@drawable/bg_paint"
+                android:text="划线"
+                android:textColor="@drawable/bg_text_polygon_make"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llReset"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/bg_ripper_borderless"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/bg_reset"
+                android:gravity="center"
+                android:text="重置"
+                android:textColor="@drawable/bg_text_polygon_make"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBackStep"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/bg_ripper_borderless"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvBackStep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/bg_back_step"
+                android:gravity="center"
+                android:text="撤销"
+                android:textColor="@drawable/bg_text_polygon_make"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llConfirm"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20.5dp"
+        android:gravity="center"
+        android:background="@drawable/bg_back_oval_1" >
+        <ImageView
+            android:layout_width="match_parent"
+            android:src="@mipmap/btn_sure"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</RelativeLayout>

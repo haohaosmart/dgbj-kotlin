@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#EDEDED"/>
+        <LinearLayout
+            android:id="@+id/llLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_ripper_borderless"
+            android:layout_alignParentBottom="true"
+            android:gravity="left|center_vertical"
+            android:minWidth="40dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:src="@mipmap/btn_menu" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="1dp"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/tvForMap"
+                android:layout_width="70dp"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="#2A62FF"
+                android:text="采集地图"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvForList"
+                android:layout_width="70dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:textSize="15sp"
+                android:textColor="#333333"
+                android:text="采集列表"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+            <View
+                android:id="@+id/viewForMap"
+                android:layout_width="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_height="3dp"
+                android:background="@drawable/bg_selected_line"/>
+            <View
+                android:id="@+id/viewForList"
+                android:layout_alignParentRight="true"
+                android:layout_width="70dp"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:layout_height="3dp"
+                android:background="@drawable/bg_selected_line"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <com.baishijiaju.dgbj.widget.NoScrollViewPager
+        android:id="@+id/viewPagerMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

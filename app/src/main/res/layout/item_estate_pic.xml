@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="180dp"
+    android:layout_height="210dp">
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="164dp"
+        android:layout_height="123dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/btn_addpicture" />
+    <ImageView
+        android:id="@+id/ivDeletePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/btn_close" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:background="#F8F8F8"
+        android:layout_below="@id/ivPhoto"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvPhotoName"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:layout_marginRight="70dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_marginLeft="8dp"
+            android:text="一号门"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvToLocate"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="7dp"
+            android:drawableLeft="@mipmap/icon_gprs"
+            android:text="定位"
+            android:textColor="#2A62FF"
+            android:textSize="14sp"
+            android:drawablePadding="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:text="正门需要门禁才能通过"
+            android:textSize="14sp"
+            android:layout_below="@id/tvPhotoName"
+            android:layout_marginTop="10dp"
+            android:lines="2"
+            android:ellipsize="end"
+            android:textColor="#999999"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>
