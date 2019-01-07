@@ -16,29 +16,33 @@ object RetrofitClient {
     private val DEFAULT_CONNECT_TIMEOUT = 50L
     private val DEFAUTL_WRITE_TIMEOUT = 50L
     private val DEFAULT_READ_TIMEOUT = 50L
+    private lateinit var mRetrofit: Retrofit
 
-    private fun getOkHttpClient(): OkHttpClient {
-        return OkHttpClient.Builder()
+    fun getRetrofit(token: String, tokenExpiredListener: TokenExpiredListener) : RetrofitClient{
+        val okhttpClient: OkHttpClient = OkHttpClient.Builder()
                 .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)) //日志,所有的请求响应度看到
+                .addInterceptor(TokenIntercepter(token, tokenExpiredListener))
                 .connectTimeout(DEFAULT_CONNECT_TIMEOUT, TimeUnit.SECONDS)
                 .readTimeout(DEFAULT_READ_TIMEOUT, TimeUnit.SECONDS)
                 .writeTimeout(DEFAUTL_WRITE_TIMEOUT, TimeUnit.SECONDS)
                 .connectionPool(ConnectionPool(8, 15L, TimeUnit.SECONDS))
                 .build()
-    }
 
-    private fun getRetrofit(): Retrofit {
-        return Retrofit.Builder()
+        mRetrofit = Retrofit.Builder()
                 .baseUrl(Const.NET_BASE_DOMIN)
-                .client(getOkHttpClient())
+                .client(okhttpClient)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
+        return this
     }
 
-
-    fun <T : Any> createService(service: Class<T>): T {
-        return getRetrofit().create(service)
+    fun <T> createAPIService(service: Class<T>?): T {
+        if (service == null) {
+            throw RuntimeException("Api service is null!")
+        }
+        return mRetrofit.create(service)
     }
+
 
 }

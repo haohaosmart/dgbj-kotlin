@@ -9,7 +9,7 @@ public class UserLoginRequest {
     public String phone;
     public String phoneCode;
 
-    public UserLoginRequest(String password,String phone,String phoneCode){
+    public UserLoginRequest(String phone,String password,String phoneCode){
         this.phone = phone;
         this.password = password;
         this.phoneCode = phoneCode;

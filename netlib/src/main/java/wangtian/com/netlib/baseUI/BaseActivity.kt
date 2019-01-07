@@ -4,11 +4,20 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.os.Environment
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import io.reactivex.Observable
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.disposables.Disposable
+import io.reactivex.observers.DisposableObserver
+import io.reactivex.schedulers.Schedulers
+import wangtian.com.netlib.net.Const
+import java.io.File
 
 
 /**
@@ -16,6 +25,7 @@ import android.widget.Toast
  */
 abstract class BaseActivity : AppCompatActivity() {
     var mActivity: AppCompatActivity? = null
+    var mCompositeDisposable: CompositeDisposable = CompositeDisposable()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,5 +52,16 @@ abstract class BaseActivity : AppCompatActivity() {
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0) //强制隐藏键盘
     }
 
+    fun getAppFileFolderPath(): String {
+        val documentsFile = Environment.getExternalStorageDirectory().absoluteFile
+        if (!documentsFile.exists()) {
+            documentsFile.mkdirs()
+        }
+        return documentsFile.absolutePath + File.separator + Const.APP_NAME + File.separator
+    }
+
+    fun addSubscription(disposable: Disposable) {
+        mCompositeDisposable.add(disposable)
+    }
 
 }

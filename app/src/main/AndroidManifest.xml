@@ -8,12 +8,19 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
+        android:name=".MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.alibaba.app.appkey"
+            android:value="25542443" /> <!--阿里云推送25475014-->
+        <meta-data
+            android:name="com.alibaba.app.appsecret"
+            android:value="74bba2261bebf5afcb27f2fd64496e90" /> <!--阿里云推送31074e0f1d81c6cda9c707950ebae475-->
         <activity android:name="com.baishijiaju.dgbjForKotlin.ui.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.mineUpdatePassword.UpdatePasswordActivity"/>
     </application>
 
 </manifest>

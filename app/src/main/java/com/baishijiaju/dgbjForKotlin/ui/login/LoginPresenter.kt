@@ -1,5 +1,7 @@
 package com.baishijiaju.dgbjForKotlin.ui.login
 
+import android.app.Activity
+import android.content.Intent
 import android.util.Log
 import com.baishijiaju.dgbjForKotlin.util.GsonUtil
 import wangtian.com.netlib.baseUI.BasePresenter
@@ -15,17 +17,15 @@ import wangtian.com.netlib.net.RetrofitClient
  */
 class LoginPresenter(iLoginView: ILoginView) : BasePresenter<ILoginView>() {
 
-    var TAG = "LoginPresenter"
     var userApiService: UserApiService
 
     init {
         attachView(iLoginView)
-        userApiService = RetrofitClient.createService(UserApiService::class.java)
+        userApiService = mRetrofitClient.createAPIService(UserApiService::class.java)
     }
 
+
     fun onLogin(username: String, password: String, phoneCode: String) {
-
-
         addSubscription(userApiService.reqLogin(UserLoginRequest(username,password,phoneCode)), object : BaseObserver<UserLoginResponse>() {
 
             override fun onFinish() {
@@ -37,7 +37,7 @@ class LoginPresenter(iLoginView: ILoginView) : BasePresenter<ILoginView>() {
             }
 
             override fun onSuccess(model: UserLoginResponse) {
-                Log.d(TAG,"userLoginResponse is " + GsonUtil.toJsonString(model))
+               mView?.onLoginSucceed(model)
             }
 
         })
